@@ -8,7 +8,12 @@
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    margin: 100px;
+    transition: background-color .4s ease-in-out;
+}
+
+.container {
+    padding: 20px 0 20px 0;
+    width: 60px;
 }
 
 #menu::before,
@@ -19,6 +24,7 @@
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
     position: absolute;
+    transition: transform 0.5s ease-in-out;
 }
 
 #menu::before {
@@ -30,4 +36,20 @@
     left: 0;
     top: 20px;
 }
+
+.container:hover #menu {
+    background-color: transparent;
+}
+
+.container:hover #menu::before {
+    transform-origin: left;
+    transform: rotate(42deg);
+}
+
+.container:hover #menu::after {
+    transform-origin: left;
+    transform: rotate(-42deg);
+}
+
+
 
