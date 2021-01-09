@@ -8,7 +8,7 @@
     position: relative;
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
-    transition: background-color .4s ease-in-out;
+    transition: background-color 0.4s ease-in-out;
 }
 
 .container {
@@ -24,7 +24,7 @@
     width: var(--menu-bar-width);
     height: var(--menu-bar-height);
     position: absolute;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 #menu::before {
@@ -42,13 +42,11 @@
 }
 
 .container:hover #menu::before {
-    transform-origin: left;
-    transform: rotate(42deg);
+    transform: translateY(20px) rotate(42deg);
 }
 
 .container:hover #menu::after {
-    transform-origin: left;
-    transform: rotate(-42deg);
+    transform: translateY(-20px) rotate(-42deg);
 }
 
 
